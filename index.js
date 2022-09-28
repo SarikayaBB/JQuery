@@ -32,10 +32,11 @@ var inp = prompt("Kac buton?");
 
 for (let i = 1; i <= inp; i++) {
   $("div").append("<button id='btn-" + i + "'>Button"+i+"</button>");
-  if (i % 2 == 0) {
-    $("#btn-" + i).addClass("btn btn-danger btn-lg");
-  } else {
-    $("#btn-" + i).addClass("btn btn-primary btn-lg");
-  }
+  // if (i % 2 == 0) {
+  //   $("#btn-" + i).addClass("btn btn-danger btn-lg");
+  // } else {
+  //   $("#btn-" + i).addClass("btn btn-primary btn-lg");
+  // }
+  $("#btn-" + i).addClass(i%2==0?"btn btn-danger btn-lg":"btn btn-primary btn-lg");
   $("#btn-" + i).css("padding","5px");
 }
